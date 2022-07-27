@@ -1,0 +1,70 @@
+
+
+.label-avatar{
+    width:280px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor : pointer;
+}
+
+
+.label-avatar input{
+    display:none;
+}
+
+.label-avatar span {
+    z-index: 99;
+    position : absolute;
+    opacity: 0.7;
+}
+
+.label-avatar img {
+    max-width: 150px;
+    height: 130px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    border-color: blue;
+   
+}
+
+.form-profile input{
+
+ width: 300px;
+ height: 20px;
+ padding: 10px;
+ margin-top: 5px;
+
+
+
+}
+
+.form-profile button {
+    width: 90px;
+    padding:10px;
+  height: 40px;
+    margin-top: 20px;
+}
+
+.form-profile{
+    background-color: #FFF;
+    padding: 20px;
+    border-radius: 1em;
+    width: 100%;
+}
+
+.Sair{
+   padding:20px;
+   background-color:#FFf;
+   border-radius: 1em;
+   margin-top: 20px;
+}
+
+
+.Sair button {
+    width: 100px;
+    height: 30px;
+    background-color: #FFF;
+}
