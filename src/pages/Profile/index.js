@@ -20,6 +20,43 @@ const [avatarUrl ,setAvatarUrl] = useState(user && user.avatarUrl);
 const [imageAvatar, setImageAvatar]= useState(null);
 
 
+//previa imagem na tela 
+function handlefile(e){
+
+if(e.target.files[0]);
+const image = e.target.files[0];
+
+if (image.type === 'image/jpeg' || image.type === 'image/png' ){
+  setImageAvatar(image);
+  setAvatarUrl(URL.createObjectURL(e.target.files[0]))
+ 
+}else{
+  alert('Envie uma imagem do tipo PNG ou JPEG');
+  setImageAvatar(null);
+  return null;
+ }
+
+
+}
+
+//upando imagem para firebasse
+
+async function handleUpload(){
+  const currentUid = user.uid;
+
+  const uploadTask = await firebase.storage()
+  .ref(`images/${currentUid}/${imageAvatar.name}`)
+  .put(imageAvatar)
+  .then( async () => {
+    console.log('FOTO ENVIADA COM SUCESSO!');
+ })
+
+
+
+}
+
+
+
 //editar usuario
 
 async function handleSave(e){
@@ -45,7 +82,9 @@ async function handleSave(e){
       })
 
     }
-    
+    else if ( nome !== '' && imageAvatar == null){
+      handleUpload();
+    }
 
   }
 
@@ -67,7 +106,7 @@ async function handleSave(e){
                     <FiUpload color="FFF" size={25}/>
                     </span>
 
-<input type="file" accept="image/*"/> <br/>
+<input type="file" accept="image/*" onChange={handlefile}/> <br/>
 { avatarUrl === null ? 
 <img src={avatar} width="250" height="250" alt="foto perfil usuario"/>
 :
