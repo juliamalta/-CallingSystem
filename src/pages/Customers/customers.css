@@ -1,0 +1,28 @@
+
+.form-cliente {
+display: flex;
+justify-content: end;
+background-color: #FFF;
+border-radius:10px;
+padding:20px;
+margin:10px;
+justify-content: center;
+}
+
+.form-cliente input{
+    padding: 10px;
+    margin: 10px;
+    width: 350px;
+
+}
+
+
+.form-cliente button{
+    
+    width: 90px;
+    padding:10px;
+  height: 40px;
+    margin-top: 20px;
+    
+
+}

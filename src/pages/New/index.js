@@ -30,10 +30,12 @@ export default function New(){
     
         </select>
         
-        <label className="teste">Status </label>
-        <input type="radio" name="status" value="Em aberto"/> Em aberto
-        <input type="radio" name="status" value="Progresso"/>Progresso
-        <input type="radio" name="status" value="Atendido"/>Atendido
+        <label className="teste">Status <br/>
+        <input type="radio" name="status" value="Em aberto"/> Em aberto<br/>
+        <input type="radio" name="status" value="Progresso"/>Progresso<br/>
+        <input type="radio" name="status" value="Atendido"/>Atendido<br/>
+        </label>
+        <button className="botao">Adicionar Chamado</button>
         
     </form>
 </div>

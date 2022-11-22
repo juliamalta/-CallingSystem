@@ -2,7 +2,20 @@
     background-color: #FFF;
     padding: 20px;
     border-radius: 1em;
-    width: 100%;
+    width:100%;
+}
+
+.form-chamado select  {
+    width:50%;
+}
+
+
+.form-chamado button{
+ display:flex;
+ margin-top: 20px;
+ padding:21px;
+ width:10%;
+ align-items: center;
 }
 
 
