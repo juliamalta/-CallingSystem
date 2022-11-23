@@ -5,6 +5,7 @@ import Dashboard from '../pages/Dashboard';
 import Profile from "../pages/Profile";
 import New from '../pages/New';
 import Customers from '../pages/Customers';
+import Logout from '../pages/Logout';
 import  Route from './Route';
 
 export default function Routes () {
@@ -16,6 +17,7 @@ export default function Routes () {
           <Route exact path="/profile" component={Profile} isPrivate/>
           <Route exact path="/customers" component={Customers} isPrivate/>
           <Route exact path="/new" component={New} isPrivate/>
+          <Route exact path="/logout" component={Logout} isPrivate/>
          </Switch>
     )
 }

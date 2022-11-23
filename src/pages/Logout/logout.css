@@ -1,0 +1,17 @@
+.sair{
+    
+
+    padding:30px;
+    border-radius: 2em;
+  
+    margin-top: 20px;
+ }
+ 
+ 
+ .sair button {
+    background-color: #5fd204;
+  
+     width: 100px;
+     height: 30px;
+   
+ }

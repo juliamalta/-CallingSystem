@@ -2,7 +2,7 @@ import './header.css';
 import { AuthContext } from '../../Contexts/auth';
 import { useContext } from 'react';
 import avatar from '../../assets/avatar.png';
-import {FiHome,FiUser,FiSettings} from "react-icons/fi";
+import {FiHome,FiUser,FiSettings,FiLogOut} from "react-icons/fi";
 import { Link} from "react-router-dom";
 
 
@@ -31,6 +31,10 @@ Clientes
 <Link to="/profile">
 <FiSettings color  = "FFF" size= {24}/>
 Configurações
+</Link>
+<Link to="/logout">
+    <FiLogOut color = "FFF" size= {24}/>
+    Logout
 </Link>
 
         </div>

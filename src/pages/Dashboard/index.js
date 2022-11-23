@@ -25,7 +25,7 @@ export default function Dashboard(){
           {chamados.length === 0 ? (
 
 <div className="container dashboard">
-            <span>Nenhuma chamado registrado</span>
+            <span>Nenhuma chamado registrado...</span>
         
                 <Link to="/new" className="new">
                 <FiPlus size = {25} ></FiPlus>
