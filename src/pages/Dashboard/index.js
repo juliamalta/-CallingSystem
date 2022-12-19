@@ -1,18 +1,30 @@
-import { useContext, useState } from "react";
+import { useContext, useState,useEffect } from "react";
 import  {AuthContext} from '../../Contexts/auth';
 import Title from "../../components/TItle";
 import Header from "../../components/Header";
-import  {FiMessageSquare, FiSave} from "react-icons/fi"
+import  {FiMessageSquare, FiSave } from "react-icons/fi"
 import "./dash.css";
 import {FiPlus,FiEdit} from "react-icons/fi"
-import {FiSearch} from "react-icons/fi"
+import {FiSearch ,FiTrash} from "react-icons/fi"
 import {FiEdit2} from "react-icons/fi"
 import New from "../New";
 import { Link} from "react-router-dom";
 
+
+
+
 export default function Dashboard(){
   
+
     const [chamados,setChamados] = useState([1]);
+    const[loadCustomers,setLoadCustomers]= useState(true);
+
+
+
+ 
+
+
+
       return (
         <div>
             <Header/>
@@ -58,10 +70,12 @@ export default function Dashboard(){
         <td data-label="Status">
             <span className="badge" style={{backgroundColor: '#5cb85c'}}>Em aberto</span>
         </td>
-        <td data-label="Cadastrado">20/06/2021</td>
+        <td data-label="Cadastrado">08/12/2022</td>
         <td data-label="#">
             <button className="action" style={{backgroundColor: '#3583f6'}}><FiSearch color="#FFF" size={17} ></FiSearch></button>
             <button className="action" style={{backgroundColor: '#F6a935'}}><FiEdit color="#FFF" size={17} ></FiEdit></button>
+            <button className="action" style={{backgroundColor: '#940404'}}><FiTrash color="#FFF" size={17} ></FiTrash></button>
+
         </td>
     </tr>
 </tbody>
@@ -78,4 +92,5 @@ export default function Dashboard(){
 
          
     )
-}
+          }
+    
